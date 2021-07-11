@@ -473,3 +473,12 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 .cards img{
   position:relative;
 }
+
+li i{
+  font-size: 50px;
+  color:antiquewhite;
+}
+
+li i:hover{
+  scale: 1.5;
+}

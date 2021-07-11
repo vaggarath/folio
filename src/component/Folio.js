@@ -7,12 +7,14 @@ const Folio = ({language, toggled}) => {
             content:'',
             techno:['ReactJS', 'Bootstrap', 'CSS'],
             img:'./this.jpg',
+            github:'https://github.com/vaggarath/folio'
         },
         {
             title:'Projet Medicis',
             content:'',
             techno:['ReactJS', 'Bootstrap', 'PHP 7.4', 'PostgreSQL'],
             img:'./medicis.jpg',
+            github:'https://github.com/vaggarath/medicis'
         },
         {
             title:'Lycan',
@@ -21,22 +23,25 @@ const Folio = ({language, toggled}) => {
             img:'./lycan.jpg',
         },
         {
-            title:'ForEach(Music){}',
+            title:'DWWM',
             content:'',
             techno:['Wordpress', 'ACF', 'CSS', 'Javascript'],
             img:'./project3.JPG.jpg',
+            link:'http://ecfwordpress.vag.ovh'
         },
         {
             title:'ForEach(Music){}',
             content:'',
             techno:['HTML', 'CSS', 'Javascript'],
             img:'./project4.JPG.jpg',
+            link:'http://ecfjs.vag.js'
         },
         {
             title:'Space_App',
             content:'',
             techno:['NextJS', 'SCSS'],
             img:'./spaceapp.jpg',
+            github:'https://github.com/vaggarath/space-app-new'
         },
         {
             title:'Des envies de saisons',
@@ -55,6 +60,7 @@ const Folio = ({language, toggled}) => {
             content:'',
             techno:['ReactJS', 'TailwindCSS', 'Firebase'],
             img:'./chat_conn.jpg',
+            github:'https://github.com/vaggarath/chat-demo'
         },
     ]
     return (
@@ -63,7 +69,17 @@ const Folio = ({language, toggled}) => {
             <ul class="grid cards mt-5">
             {
                 projets.map(proj=>(
-                   <li><h2>{proj.title}</h2>
+                   <li>
+                    <div className="d-flex justify-content-between">
+                        <h2>{proj.title}</h2>
+                        {
+                            proj.github
+                            ? <a href={proj.github} target="_blank"><i class="fab fa-github-square"></i></a>
+                            : ''
+                        }
+                        
+                    </div>
+                       
                    <img src={proj.img} alt="" className="w-100 imgzoom" />
                    <ul class="tags mt-2">
                        {
