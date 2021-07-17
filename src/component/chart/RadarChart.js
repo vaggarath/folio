@@ -12,7 +12,10 @@ export class RadarChart extends React.Component {
     console.log(this.chartRef);
   }
 
+  
+
   render() {
+    
     return (
         <div className="radar mx-auto">
             <Radar ref={this.chartRef} data={RadarData} options={RadarOptions} />

@@ -28,7 +28,7 @@ const Formation = ({language, toggled}) => {
     return (
         <div className="container my-auto" id="formation" style={toggled ? {backgroundColor: ''} : {backgroundColor: 'white', color:'black'}}>
             <h1 className="text-center mb-5 mt-5">{language ? "Education" : "Formations"}</h1>
-            <div className="d-flex flex-md-row flex-column justify-content-between">
+            <div className="d-flex flex-xl-row flex-column justify-content-between">
             {
                 formations.map(form=>(
                     <div class="element element-2 d-flex flex-column mx-auto mb-5">

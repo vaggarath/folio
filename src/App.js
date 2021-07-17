@@ -11,6 +11,7 @@ import Skills from './component/Skills';
 import Folio from './component/Folio';
 import Contact from './component/Contact';
 
+
 function App() {
 
   const [toggled, setToggled] = React.useState(true);
@@ -24,7 +25,9 @@ function App() {
         setEnglish((s)=> !s)
     }
 
+
   return (
+    
     <div className={toggled ? "App-night" : "App"}  style={toggled ? {backgroundColor: ''} : {backgroundColor: 'white', color:'black'}}>
       
       <Header toggled={toggled} onClick={handleClick} handleLanguage={handleLanguage} language={english} />
